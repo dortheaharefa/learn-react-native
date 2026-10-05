@@ -1,28 +1,17 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import Welcome from "./components/welcome";
-import Counter from "./components/Counter";
+import { View, Text, Button } from "react-native";
+import { useState } from "react";
 
 export default function App() {
+  const [jumlah, setJumlah] = useState(0);
+
   return (
-    <View style={styles.container}>
-      <Welcome name="Dorthea" major="Teknologi Informasi" semester="7" />
-      <Text style={styles.title}> APLIKASI PENGABUL HARAPAN</Text>
-      <Counter />
-      <StatusBar style="auto" />
+    <View>
+      <Text>Jumlah: {jumlah}</Text>
+
+      <Button
+        title="Tambah"
+        onPress={() => setJumlah(jumlah + 1)}
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-  },
-});
