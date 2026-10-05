@@ -1,21 +1,16 @@
+import { View, Text, Button } from "react-native";
 import { StyleSheet} from "react-native";
 import { useState } from "react";
-import { View, Text, TextInput } from "react-native";
+
 
 export default function App() {
-  const [nama, setNama] = useState("");
+  const [jumlah, setJumlah] = useState(0);
 
   return (
     <View style={styles.container}>
-      <Text>Nama:</Text>
+      <Text>Jumlah: {jumlah}</Text>
 
-      <TextInput
-        placeholder="Ketik nama kamu"
-        value={nama}
-        onChangeText={setNama}
-      />
-
-      <Text>Halo, {nama}!</Text>
+      <Button title="Tambah" onPress={() => setJumlah(jumlah + 1)} />
     </View>
   );
 }
