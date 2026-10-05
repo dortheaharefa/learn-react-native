@@ -1,26 +1,21 @@
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { StyleSheet} from "react-native";
 import { useState } from "react";
+import { View, Text, TextInput } from "react-native";
 
 export default function App() {
   const [nama, setNama] = useState("");
-  const [namaTersimpan, setNamaTersimpan] = useState("");
 
   return (
     <View style={styles.container}>
       <Text>Nama:</Text>
 
       <TextInput
-        placeholder="Masukkan nama"
+        placeholder="Ketik nama kamu"
         value={nama}
         onChangeText={setNama}
       />
 
-      <Button
-        title="Simpan"
-        onPress={() => setNamaTersimpan(nama)}
-      />
-
-      <Text>Nama kamu: {namaTersimpan}</Text>
+      <Text>Halo, {nama}!</Text>
     </View>
   );
 }
@@ -31,5 +26,9 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
   },
 });
