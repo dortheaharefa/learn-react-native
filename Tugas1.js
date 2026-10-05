@@ -4,7 +4,10 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}> APLIKASI PERPUSTAKAAN</Text>
+      <Text>Nama: Dorthea Elvita Harefa</Text>
+      <Text>NIM: 232301016</Text>
+      <Text>Program Studi: Teknologi Informasi</Text>
+      <Text>Saya sedang belajar React Native Expo Go.</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,9 +19,5 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
   },
 });
