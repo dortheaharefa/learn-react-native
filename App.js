@@ -5,7 +5,7 @@ import Welcome from "./components/welcome";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Welcome />
+      <Welcome name="Dorthea" />
       <Text style={styles.title}> APLIKASI PENGABUL HARAPAN</Text>
       <StatusBar style="auto" />
     </View>
